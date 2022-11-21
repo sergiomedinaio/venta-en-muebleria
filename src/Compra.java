@@ -4,9 +4,11 @@ public class Compra extends Transaccion{
 
     public void agregarAlCarrito(ObjetoVendible vendible) {
         if (vendible.getReserva() != null) {
-            if(vendible.getReserva().getCliente() != getCliente()) {
+            Cliente clienteQueReservo = vendible.getReserva().getCliente();
+            Cliente clienteActual = getCliente();
+            if(clienteQueReservo.getNombre() != clienteActual.getNombre()) {
                 System.out.println(String.format(
-                        "El producto ya fue reservado a %",
+                        "El producto ya fue reservado a %s",
                         vendible.getReserva().getCliente().getNombre()
                 ));
                 return;
@@ -26,9 +28,9 @@ public class Compra extends Transaccion{
             descuentoFinal = 10;
         }
         int finalDescuentoFinal = descuentoFinal;
+        System.out.println("Lista de compra");
         getVendibles().forEach(vendible -> {
             vendible.setCompra(this);
-            System.out.println("Lista de compra");
             double precioProducto = vendible.getPrecioLista()*(100 - finalDescuentoFinal)/100;
             precioFinal += precioProducto;
             System.out.println(String.format(
@@ -38,6 +40,7 @@ public class Compra extends Transaccion{
                     precioProducto
             ));
         });
+        System.out.println(getPrecioFinal());
     }
 
     public Compra(Cliente cliente, Vendedor vendedor) {

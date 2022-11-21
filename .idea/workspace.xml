@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c4dcb62-8682-40db-af24-a2e4b0b4f917" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reserva.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transaccion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vendedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Compra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetoVendible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetoVendible.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +55,30 @@
       <option name="project" value="LOCAL" />
       <updated>1669040734899</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="chore: add exercise solution">
+      <created>1669043970418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669043970418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: add initial project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add initial project setup" />
+    <MESSAGE value="chore: add exercise solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add exercise solution" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Compra.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
