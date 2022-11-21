@@ -2,6 +2,10 @@ public class ObjetoVendible {
     private String nombre;
     private double precioLista;
 
+    private Reserva reserva;
+
+    private Compra compra;
+
     public ObjetoVendible(String nombre, double precioLista) {
         this.nombre = nombre;
         this.precioLista = precioLista;
@@ -23,4 +27,19 @@ public class ObjetoVendible {
         this.nombre = nombre;
     }
 
+    public Reserva getReserva() {
+        return reserva;
+    }
+
+    public void setReserva(Reserva reserva) {
+        this.reserva = reserva;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
 }
