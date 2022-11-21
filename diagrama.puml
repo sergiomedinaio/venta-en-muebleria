@@ -1,0 +1,67 @@
+@startuml
+class Vendedor {
+- String nombre
+- ArrayList<ObjetoVendible> objetoVendibles
++ <<Create>> Vendedor(String)
++ String getNombre()
++ void setNombre(String)
++ ArrayList<ObjetoVendible> getObjetoVendibles()
++ void setObjetoVendibles(ArrayList<ObjetoVendible>)
+}
+class Compra {
+- double precioFinal
++ <<Create>> Compra(Cliente,Vendedor)
++ void agregarAlCarrito(ObjetoVendible)
++ void generarTicket(String,int,int)
++ double getPrecioFinal()
++ void setPrecioFinal(double)
+}
+class ObjetoVendible {
+- String nombre
+- double precioLista
+- Reserva reserva
+- Compra compra
++ <<Create>> ObjetoVendible(String,double)
++ double getPrecioLista()
++ void setPrecioLista(double)
++ String getNombre()
++ void setNombre(String)
++ Reserva getReserva()
++ void setReserva(Reserva)
++ Compra getCompra()
++ void setCompra(Compra)
+}
+class Reserva {
++ <<Create>> Reserva(Cliente,Vendedor,ObjetoVendible)
++ void agregarReserva(ObjetoVendible)
+}
+class Cliente {
+- String nombre
+- ArrayList<ObjetoVendible> objetoVendibles
++ <<Create>> Cliente(String)
++ String getNombre()
++ void setNombre(String)
++ ArrayList<ObjetoVendible> getObjetoVendibles()
++ void setObjetoVendibles(ArrayList<ObjetoVendible>)
+}
+class Main {
++ {static} void main(String[])
+}
+class Transaccion {
+- Cliente cliente
+- Vendedor vendedor
+- ArrayList<ObjetoVendible> vendibles
++ <<Create>> Transaccion(Cliente,Vendedor)
++ Cliente getCliente()
++ void setCliente(Cliente)
++ Vendedor getVendedor()
++ void setVendedor(Vendedor)
++ ArrayList<ObjetoVendible> getVendibles()
++ void setVendibles(ArrayList<ObjetoVendible>)
++ void agregarVendible(ObjetoVendible)
+}
+
+
+Transaccion <|-- Compra
+Transaccion <|-- Reserva
+@enduml
